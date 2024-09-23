@@ -1,204 +1,76 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Memecloud, the ultimate hub for the funniest and trendiest memes.">
+    <title>Memecloud - Your Meme Universe</title>
+    <!-- Google Font: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-a {
-    text-decoration: none;
-    color: #1e90ff; /* Blue color for links */
-}
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="logo.png" alt="Memecloud Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-/* Sidebar */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #1e90ff; /* Blue sidebar */
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-}
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="welcome-message">
+            <p>Welcome to Memecloud - Your Meme Universe</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="#upload">Upload</a></li>
+            </ul>
+        </nav>
+    </header>
 
-.sidebar .logo img {
-    width: 150px;
-    margin-bottom: 40px;
-}
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to Memecloud</h1>
+            <p>Your one-stop destination for all things memes. Browse, upload, and enjoy the funniest content!</p>
+            <a href="#trending" class="cta">Explore Trending Memes</a>
+        </section>
 
-.sidebar nav ul {
-    list-style-type: none;
-    padding: 0;
-}
+        <!-- Trending Memes Section -->
+        <section id="trending" class="trending">
+            <h2>Trending Memes</h2>
+            <div class="meme-gallery">
+                <div class="meme"><img src="meme1.jpg" alt="Meme 1"></div>
+                <div class="meme"><img src="meme2.jpg" alt="Meme 2"></div>
+                <div class="meme"><img src="meme3.jpg" alt="Meme 3"></div>
+            </div>
+        </section>
 
-.sidebar nav ul li {
-    margin: 20px 0;
-}
+        <!-- Upload Section -->
+        <section id="upload" class="upload">
+            <h2>Got Memes? Upload Here!</h2>
+            <p>Share your favorite memes with the world.</p>
+            <a href="upload.html" class="cta">Upload Your Meme</a>
+        </section>
+    </main>
 
-.sidebar nav ul li a {
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-}
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Memecloud. All rights reserved.</p>
+    </footer>
 
-/* Top Bar */
-.topbar {
-    height: 50px;
-    background-color: #f0f8ff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    left: 250px;
-    right: 0;
-}
-
-.topbar p {
-    font-size: 16px;
-    color: #333;
-}
-
-.topbar nav ul {
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
-}
-
-.topbar nav ul li a {
-    color: #1e90ff;
-    font-weight: 600;
-}
-
-/* Main Content */
-.main-content {
-    margin-left: 250px;
-    padding-top: 70px;
-    padding: 20px;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background-color: #f0f8ff;
-}
-
-.hero h1 {
-    font-size: 48px;
-    color: #1e90ff;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.cta {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #1e90ff;
-    color: #fff;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-
-.cta:hover {
-    background-color: #0057b8;
-}
-
-/* Trending Memes Section */
-.trending {
-    padding: 50px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.trending h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.meme-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.meme img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Upload Section */
-.upload {
-    padding: 50px 20px;
-    background-color: #f0f8ff;
-    text-align: center;
-}
-
-.upload h2 {
-    font-size: 36px;
-    color: #1e90ff;
-}
-
-.upload p {
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.upload .cta {
-    margin-top: 20px;
-}
-
-/* Footer */
-footer {
-    padding: 20px;
-    background-color: #1e90ff;
-    color: #fff;
-    text-align: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .meme-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-        position: static;
-    }
-
-    .topbar {
-        left: 0;
-    }
-
-    .main-content {
-        margin-left: 0;
-    }
-}
+</body>
+</html>
